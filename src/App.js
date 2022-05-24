@@ -1,7 +1,8 @@
-import "./App.css";
-import { useState } from "react";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
+<<<<<<< HEAD
   const [city, setscity] = useState("enter the city");
   const [searchcity, setsearchcity] = useState(null);
 
@@ -83,6 +84,24 @@ function App() {
           </div>
         </div>
       </div>
+=======
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> parent of 6a44c0c (uploas)
     </div>
   );
 }
