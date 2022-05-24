@@ -11,7 +11,6 @@ function App() {
       const response = await fetch(url);
       const ApiData = await response.json();
       setscity(ApiData);
-      console.log(city);
     }
     fetchapi();
   };
@@ -74,7 +73,9 @@ function App() {
 
                     <h3>Min: {city.main.temp_min} | Max: {city.main.temp_max}</h3>
 
-                    <h3>Climate:{city.weather.id}</h3>
+                    <h3>Climate: {city.weather[0].main}</h3>
+                    <h3>Description: {city.weather[0].description}</h3>
+                    <h3>Clouds: {city.clouds.all}</h3>
                 </center>
                   </div>
                   </>
