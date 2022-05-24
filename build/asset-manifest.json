@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactwheatherapplication/static/css/main.f6491de8.css",
+    "main.js": "/reactwheatherapplication/static/js/main.b8d1436f.js",
+    "static/js/787.158c5175.chunk.js": "/reactwheatherapplication/static/js/787.158c5175.chunk.js",
+    "index.html": "/reactwheatherapplication/index.html",
+    "main.f6491de8.css.map": "/reactwheatherapplication/static/css/main.f6491de8.css.map",
+    "main.b8d1436f.js.map": "/reactwheatherapplication/static/js/main.b8d1436f.js.map",
+    "787.158c5175.chunk.js.map": "/reactwheatherapplication/static/js/787.158c5175.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6491de8.css",
+    "static/js/main.b8d1436f.js"
+  ]
+}
