@@ -1,25 +1,28 @@
 import "./App.css";
 import { useState } from "react";
+import React from "react";
 
 function App() {
   
   const [city, setscity] = useState("enter the city");
   const [searchcity, setsearchcity] = useState(null);
 
-  const searchfunction = () => {
-    async function fetchapi() {
+  const searchfunction = async() => {
+    // async function fetchapi() {
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchcity}&units=metric&appid=bab6cf68f1434dbd49d645f96abac20e`;
       const response = await fetch(url);
       const ApiData = await response.json();
       setscity(ApiData);
-    }
-    fetchapi();
+      console.log(ApiData);
+    // }
+    // fetchapi();
   };
 
   const finidingcity = (event) => {
     setsearchcity(event.target.value);
   };
   return (
+      
     <div className="App">
       <div className="container mt-1">
         <div className="row justify-content-center " id="maincontainer">
@@ -54,12 +57,15 @@ function App() {
           <div className="w-100 m-3"></div>
 
           <div className="col-md-6 pt-5 pb-5 text-light" id="mainbox">
-              {!city.name ? (
+              {!city.name ? <div>
+
                 <center>
                 <h1>{city ==="enter the city"? city: "no data"}</h1>
                 </center>
-              ) : (
-                <>
+                </div>
+
+              : <div>
+                
                   <h1>
                     <i className="fas fa-street-view"></i>
                     {city.name}
@@ -79,8 +85,9 @@ function App() {
                     <h3>Clouds: {city.clouds.all}</h3>
                 </center>
                   </div>
-                  </>
-              )}
+                
+              </div>
+              }
           </div>
         </div>
       </div>
